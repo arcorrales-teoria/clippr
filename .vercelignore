@@ -1,0 +1,9 @@
+# Ignore the Python backend — Vercel only deploys the Next.js frontend (web/)
+*.py
+*.pt
+requirements.txt
+outputs/
+uploads/
+__pycache__/
+index.html
+README.md

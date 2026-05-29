@@ -26,3 +26,6 @@ web/.env*.local
 
 # Segment registry (runtime state)
 outputs/segment_registry.json
+
+# YOLOv8 model weights (auto-downloaded by ultralytics on first run)
+*.pt
