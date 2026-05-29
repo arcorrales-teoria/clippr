@@ -1,6 +1,8 @@
 # Python 3.10+ required
 # Install with: python3.11 -m pip install -r requirements.txt
 
+flask>=3.0.0
+flask-cors>=4.0.0
 ultralytics>=8.0.0
 openai-whisper>=20231117
 opencv-python>=4.8.0
