@@ -29,3 +29,4 @@ outputs/segment_registry.json
 
 # YOLOv8 model weights (auto-downloaded by ultralytics on first run)
 *.pt
+.vercel
