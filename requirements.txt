@@ -1,0 +1,11 @@
+# Python 3.10+ required
+# Install with: python3.11 -m pip install -r requirements.txt
+
+ultralytics>=8.0.0
+openai-whisper>=20231117
+opencv-python>=4.8.0
+moviepy>=1.0.3
+Pillow>=10.0.0
+numpy>=1.24.0
+ffmpeg-python>=0.2.0
+torch>=2.0.0

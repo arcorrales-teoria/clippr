@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f0f13;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+select option {
+  background: #1a1a1f;
+  color: #fff;
+}
+
+/* ── Button system ────────────────────────────────────────────────────────── */
+
+.btn {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  ) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.25) inset,
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn:active {
+  transform: translateY(0px) !important;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+
+/* Selected state for toggle-style buttons */
+.btn[data-selected="true"] {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.28) 0%,
+    rgba(124, 58, 237, 0.1) 100%
+  ) !important;
+  border-color: rgba(124, 58, 237, 0.65) !important;
+  color: rgba(196, 181, 253, 1) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
+    0 2px 8px rgba(124, 58, 237, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn[data-selected="true"]:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.38) 0%,
+    rgba(124, 58, 237, 0.18) 100%
+  ) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.25) inset,
+    0 4px 12px rgba(124, 58, 237, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Primary — filled blue */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    #3b82f6 0%,
+    #2563eb 60%,
+    #1d4ed8 100%
+  ) !important;
+  border: 1px solid rgba(37, 99, 235, 0.6) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 2px 8px rgba(37, 99, 235, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(
+    135deg,
+    #60a5fa 0%,
+    #3b82f6 60%,
+    #2563eb 100%
+  ) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 4px 12px rgba(37, 99, 235, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0px) !important;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-primary:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+
+/* Icon-only small buttons */
+.btn-icon {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 1px 3px rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn-icon:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-icon:active {
+  transform: translateY(0px) !important;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.15) inset,
+    0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-icon:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+
+/* The Toggle switch component must never inherit button box styles */
+.toggle-switch {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
