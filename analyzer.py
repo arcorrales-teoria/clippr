@@ -331,9 +331,11 @@ def _evenly_spaced(
 
 
 def _video_duration(path: str) -> float:
-    import subprocess
+    import subprocess, shutil
+    _homebrew = "/opt/homebrew/opt/ffmpeg-full/bin/ffprobe"
+    ffprobe = _homebrew if __import__("pathlib").Path(_homebrew).exists() else (shutil.which("ffprobe") or "ffprobe")
     r = subprocess.run(
-        ["/opt/homebrew/opt/ffmpeg-full/bin/ffprobe",
+        [ffprobe,
          "-v", "error", "-show_entries", "format=duration",
          "-of", "default=noprint_wrappers=1:nokey=1", path],
         capture_output=True, text=True,

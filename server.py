@@ -44,12 +44,21 @@ JOBS: dict[str, dict] = {}
 
 # ── Flask app ─────────────────────────────────────────────────────────────────
 app = Flask(__name__, static_folder=str(BASE_DIR))
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+CORS(app, origins=[
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    r"https://.*\.vercel\.app",
+    os.environ.get("FRONTEND_URL", ""),
+])
 
 
 @app.route("/")
 def index():
     return send_from_directory(str(BASE_DIR), "index.html")
+
+@app.route("/health")
+def health():
+    return jsonify(status="ok")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -584,4 +593,5 @@ if __name__ == "__main__":
     print("  Open: http://localhost:5050")
     print("="*56 + "\n")
 
-    app.run(host="0.0.0.0", port=5050, debug=False, threaded=True)
+    port = int(os.environ.get("PORT", 5050))
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

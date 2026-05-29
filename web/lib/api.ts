@@ -1,4 +1,4 @@
-const API = "";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "";
 
 export interface Speaker {
   id: number;
