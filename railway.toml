@@ -4,4 +4,3 @@
 [deploy]
   startCommand = "python3 server.py"
   healthcheckPath = "/health"
-  restartPolicyType = "on-failure"
