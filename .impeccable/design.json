@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "title": "Design System: clippr",
+  "extensions": {
+    "colorMeta": {
+      "darkroom-black": {
+        "role": "neutral",
+        "displayName": "Darkroom Black",
+        "canonical": "oklch(0.07 0.01 278)",
+        "tonalRamp": ["#040406", "#0a0a0f", "#0f0f13", "#17171e", "#202029", "#2c2c3a", "#3d3d52", "#5a5a7a"]
+      },
+      "panel-charcoal": {
+        "role": "neutral",
+        "displayName": "Panel Charcoal",
+        "canonical": "oklch(0.14 0 0)",
+        "tonalRamp": ["#080808", "#111111", "#1a1a1a", "#1e1e1e", "#262626", "#333333", "#4a4a4a", "#666666"]
+      },
+      "input-well": {
+        "role": "neutral",
+        "displayName": "Input Well",
+        "canonical": "oklch(0.19 0 0)",
+        "tonalRamp": ["#0a0a0a", "#141414", "#1e1e1e", "#2a2a2a", "#363636", "#474747", "#5f5f5f", "#7a7a7a"]
+      },
+      "terminal-void": {
+        "role": "neutral",
+        "displayName": "Terminal Void",
+        "canonical": "oklch(0.06 0.005 290)",
+        "tonalRamp": ["#030303", "#070709", "#09090b", "#0e0e11", "#131318", "#1a1a22", "#25252f", "#33333f"]
+      },
+      "primary-ink": {
+        "role": "neutral",
+        "displayName": "Primary Ink",
+        "canonical": "oklch(0.93 0 0)",
+        "tonalRamp": ["#333333", "#4d4d4d", "#666666", "#808080", "#999999", "#b3b3b3", "#cccccc", "#e8e8e8"]
+      },
+      "dim-ink": {
+        "role": "neutral",
+        "displayName": "Dim Ink",
+        "canonical": "oklch(0.57 0 0)",
+        "tonalRamp": ["#1a1a1a", "#2e2e2e", "#444444", "#585858", "#6d6d6d", "#888888", "#a3a3a3", "#c2c2c2"]
+      },
+      "iris": {
+        "role": "primary",
+        "displayName": "Iris Violet",
+        "canonical": "oklch(0.55 0.24 281)",
+        "tonalRamp": ["#100d22", "#1c1640", "#2d2365", "#3f3390", "#5548c0", "#6c63ff", "#8f88ff", "#c4bcff"]
+      },
+      "status-success": {
+        "role": "semantic",
+        "displayName": "Emerald Run",
+        "canonical": "oklch(0.73 0.18 162)",
+        "tonalRamp": ["#052e1b", "#084d2c", "#0a6e3e", "#0d9255", "#10b981", "#2dd4a4", "#6ee7c8", "#a7f3e0"]
+      },
+      "status-warning": {
+        "role": "semantic",
+        "displayName": "Amber Hold",
+        "canonical": "oklch(0.77 0.19 85)",
+        "tonalRamp": ["#2e1c02", "#4d3004", "#704608", "#946010", "#c07b18", "#f59e0b", "#fbbf24", "#fde68a"]
+      },
+      "status-error": {
+        "role": "semantic",
+        "displayName": "Signal Red",
+        "canonical": "oklch(0.60 0.22 25)",
+        "tonalRamp": ["#200606", "#3d0c0c", "#5c1212", "#7f1d1d", "#b91c1c", "#ef4444", "#f87171", "#fca5a5"]
+      }
+    },
+    "typographyMeta": {
+      "headline":  { "displayName": "Headline",  "purpose": "App-level identifiers only. The 'clippr' wordmark in the header. One per screen." },
+      "title":     { "displayName": "Title",      "purpose": "Card and section headings: Speakers, Settings, Output." },
+      "body":      { "displayName": "Body",       "purpose": "Input values, file names, primary descriptive text." },
+      "label":     { "displayName": "Label",      "purpose": "Button text, interactive element labels, speaker row names." },
+      "caption":   { "displayName": "Caption",    "purpose": "Metadata, stats, secondary sub-text: file duration, frame counts." },
+      "micro":     { "displayName": "Micro",      "purpose": "Field labels above inputs, format tags, footer hints." },
+      "mono":      { "displayName": "Mono",       "purpose": "Log stream only. Never in UI labels or stat values." }
+    },
+    "shadows": [
+      {
+        "name": "accent-glow-rest",
+        "value": "0 2px 12px rgba(108,99,255,0.35)",
+        "purpose": "Primary CTA (Generate button) at rest. The only ambient shadow in the system."
+      },
+      {
+        "name": "accent-glow-active",
+        "value": "0 2px 24px rgba(108,99,255,0.6)",
+        "purpose": "Primary CTA during active processing (pulse-glow animation peak)."
+      },
+      {
+        "name": "iris-selection",
+        "value": "0 2px 8px rgba(108,99,255,0.25)",
+        "purpose": "Selected/toggled buttons. Low-intensity active-state indicator."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 4px 8px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.25)",
+        "purpose": "Default button on hover. Conveys physical press response."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions (color, background, border)."
+      },
+      {
+        "name": "ease-lift",
+        "value": "ease",
+        "purpose": "Button translateY lift on hover. Short duration (0.15s)."
+      },
+      {
+        "name": "duration-fast",
+        "value": "120ms",
+        "purpose": "Hover background transitions."
+      },
+      {
+        "name": "duration-standard",
+        "value": "150ms",
+        "purpose": "Color, border-color, and transform transitions."
+      },
+      {
+        "name": "duration-feedback",
+        "value": "500ms",
+        "purpose": "Progress bar fill width transition."
+      },
+      {
+        "name": "pulse-glow",
+        "value": "1.8s ease-in-out infinite alternate",
+        "purpose": "Generate button during active processing. Oscillates Accent Glow shadow opacity."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "480px", "purpose": "Single-column layout for mobile." },
+      { "name": "md", "value": "700px", "purpose": "Max-width container cap (index.html app wrapper)." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button Default",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Secondary and toggle actions. Frosted semi-transparent surface on dark backgrounds.",
+      "html": "<button class=\"ds-btn\">Change file</button>",
+      "css": ".ds-btn { font-family: Geist, Inter, system-ui, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: rgba(232,232,232,0.9); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 16px; cursor: pointer; transition: background 0.12s ease, box-shadow 0.15s ease, transform 0.15s ease; display: inline-flex; align-items: center; gap: 6px; } .ds-btn:hover { background: rgba(255,255,255,0.13); transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.25); } .ds-btn:active { transform: translateY(0); box-shadow: none; } .ds-btn:focus-visible { outline: 2px solid rgba(108,99,255,0.7); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; } @media (prefers-reduced-motion: reduce) { .ds-btn { transition: background 0.12s ease; transform: none !important; } }"
+    },
+    {
+      "name": "Button Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action (Generate). Iris Violet fill. One per screen.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"5 3 19 12 5 21 5 3\"/></svg> Generate clips</button>",
+      "css": ".ds-btn-primary { font-family: Geist, Inter, system-ui, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: #ffffff; background: #6c63ff; border: none; border-radius: 8px; padding: 10px 22px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 12px rgba(108,99,255,0.35); transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; } .ds-btn-primary:hover { background: #8078ff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(108,99,255,0.5); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 2px solid rgba(108,99,255,0.8); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; box-shadow: none; } @media (prefers-reduced-motion: reduce) { .ds-btn-primary { transition: background 0.15s ease; transform: none !important; } }"
+    },
+    {
+      "name": "Button Icon",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Compact icon-only or icon+label actions in dense rows.",
+      "html": "<button class=\"ds-btn-icon\" aria-label=\"Download\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/></svg></button>",
+      "css": ".ds-btn-icon { font-family: Geist, system-ui, sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 6px 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: background 0.12s ease, transform 0.15s ease; } .ds-btn-icon:hover { background: rgba(255,255,255,0.1); transform: translateY(-1px); } .ds-btn-icon:focus-visible { outline: 2px solid rgba(108,99,255,0.7); outline-offset: 2px; } .ds-btn-icon:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Primary container for all panels (Speakers, Settings, Progress, Output). No shadow.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-header\">Speakers</div><div class=\"ds-card-body\">Content here</div></div>",
+      "css": ".ds-card { background: #1e1e1e; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; } .ds-card-header { padding: 14px 18px; font-family: Geist, system-ui, sans-serif; font-size: 13px; font-weight: 600; color: #e8e8e8; border-bottom: 1px solid rgba(255,255,255,0.06); } .ds-card-body { padding: 16px 18px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Text and number inputs. Input Well background with Iris focus border.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\">Clip count</label><input class=\"ds-field-input\" type=\"number\" value=\"5\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; } .ds-field-label { font-family: Geist, system-ui, sans-serif; font-size: 11px; font-weight: 500; color: #888888; letter-spacing: 0.02em; } .ds-field-input { font-family: Geist, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #e8e8e8; background: #2a2a2a; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 8px 12px; outline: none; width: 100%; transition: border-color 0.15s ease; } .ds-field-input:focus { border-color: #6c63ff; } .ds-field-input:focus-visible { outline: none; border-color: #6c63ff; box-shadow: 0 0 0 1px rgba(108,99,255,0.3); }"
+    },
+    {
+      "name": "Toggle Group",
+      "kind": "custom",
+      "refersTo": "button-selected",
+      "description": "Pill-style segmented control for mutually exclusive options (clip count, framing mode).",
+      "html": "<div class=\"ds-toggle-group\" role=\"group\"><button class=\"ds-toggle-btn ds-toggle-active\">Best</button><button class=\"ds-toggle-btn\">2</button><button class=\"ds-toggle-btn\">3</button><button class=\"ds-toggle-btn\">5</button></div>",
+      "css": ".ds-toggle-group { display: flex; background: #2a2a2a; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; overflow: hidden; } .ds-toggle-btn { flex: 1; padding: 8px 14px; font-family: Geist, system-ui, sans-serif; font-size: 13px; font-weight: 500; color: #888888; background: transparent; border: none; cursor: pointer; transition: color 0.15s ease, background 0.15s ease; white-space: nowrap; } .ds-toggle-btn:hover { color: #e8e8e8; } .ds-toggle-active { background: #6c63ff; color: #ffffff; }"
+    },
+    {
+      "name": "Progress Bar",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Thin fill bar showing job progress. Three semantic states: running, done, error.",
+      "html": "<div class=\"ds-progress\"><div class=\"ds-progress-bar ds-progress-running\" style=\"width: 60%\"></div></div>",
+      "css": ".ds-progress { height: 6px; background: #27272a; border-radius: 9999px; overflow: hidden; } .ds-progress-bar { height: 100%; border-radius: 9999px; transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-progress-running { background: linear-gradient(to right, #7c3aed, #3b82f6); animation: ds-pulse 1.5s ease-in-out infinite; } .ds-progress-done { background: #10b981; } .ds-progress-error { background: #ef4444; } @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.65; } } @media (prefers-reduced-motion: reduce) { .ds-progress-running { animation: none; } .ds-progress-bar { transition: none; } }"
+    },
+    {
+      "name": "Log Stream",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Terminal-style machine output. Geist Mono, Terminal Void background. Signature component.",
+      "html": "<div class=\"ds-log\"><div class=\"ds-log-line\"><span class=\"ds-log-num\">01</span>Loading model whisper-base…</div><div class=\"ds-log-line\"><span class=\"ds-log-num\">02</span>Detecting speakers in video…</div><div class=\"ds-log-line ds-log-cursor\"><span class=\"ds-log-blink\">▌</span></div></div>",
+      "css": ".ds-log { height: 160px; overflow-y: auto; border-radius: 10px; background: #09090b; border: 1px solid #27272a; padding: 12px; font-family: 'Geist Mono', 'Fira Code', ui-monospace, monospace; font-size: 12px; line-height: 1.6; color: #a1a1aa; } .ds-log-line { display: block; } .ds-log-num { color: #52525b; user-select: none; margin-right: 8px; } .ds-log-cursor { color: #6c63ff; } .ds-log-blink { animation: ds-blink 1s step-end infinite; } @keyframes ds-blink { 50% { opacity: 0; } } .ds-log-error { color: #ef4444; } @media (prefers-reduced-motion: reduce) { .ds-log-blink { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dark Room",
+    "overview": "clippr is a professional instrument, not a consumer app. The visual system takes its cue from the controlled, deliberate environments where precision work gets done: the film darkroom, the mixing booth, the machine room. Everything runs in low ambient light. The interface is quiet so the content — the video, the speakers, the output clips — is always the loudest thing on the screen.\n\nThe palette descends from near-black through tonal charcoals, using depth to separate function rather than color. One accent — Iris Violet — marks where the machine is active. It appears infrequently, which makes it informative. The type scale is tight and deliberate; fonts are system-tuned sans-serifs that carry precision without calling attention to themselves.\n\nThis system explicitly rejects the warm-neutral SaaS aesthetic, the cluttered panel-maximalism of professional video editors, and the performative vocabulary of AI marketing tools.",
+    "keyCharacteristics": [
+      "Near-black foundation with tonal charcoal layers — no warm tint, no blue shift",
+      "Single violet accent used exclusively for active states and primary actions",
+      "Restrained type scale: system sans at calibrated weights, mono for terminal output",
+      "Shadows are state-driven, not structural — surfaces are flat at rest",
+      "Motion is brief and functional: feedback and transitions, no choreography",
+      "Density is a feature — tight spacing carries authority, not cramped-ness"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Iris Violet (#6c63ff) is the only non-status color used for interactive signal. It does not appear on decorative elements, headings, or icons at rest. Its rarity is the point.", "section": "colors" },
+      { "name": "The Depth-As-Structure Rule", "body": "The five neutral tiers map directly to elevation: Darkroom Black (body) → Panel Charcoal (cards) → Input Well (inputs/toggles) → Terminal Void (log stream). Never reverse this order.", "section": "colors" },
+      { "name": "The Mono Quarantine Rule", "body": "Geist Mono appears only in the log stream and machine output surfaces. Not for code snippets in copy, not for numeric stat values, not for IDs.", "section": "typography" },
+      { "name": "The Weight-Is-Role Rule", "body": "400 = content. 500 = interactive. 600–700 = headings. Do not use bold weight on body text for emphasis.", "section": "typography" },
+      { "name": "The Flat-at-Rest Rule", "body": "Cards, panels, and containers have no box-shadow at their default state. Shadows appear only in response to state: hover, selection, or active processing.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Iris Violet (#6c63ff) exclusively for interactive signal: focus rings, checked states, active selections, running process indicators.",
+      "Do maintain the tonal depth stack: Darkroom Black (body) → Panel Charcoal (cards) → Input Well (inputs).",
+      "Do keep Dim Ink (#888) as the floor for all secondary text on dark surfaces.",
+      "Do use Geist Mono exclusively for machine output. All UI text uses Geist Sans.",
+      "Do show progress concretely: stage name, percentage, and the live log stream.",
+      "Do pair every status color with a text label or icon — never rely on color alone.",
+      "Do apply focus-visible outlines (2px Iris Violet offset-2) to every interactive element.",
+      "Do use @media (prefers-reduced-motion: reduce) alternatives for all animations."
+    ],
+    "donts": [
+      "Don't use warm-neutral backgrounds. No cream, sand, beige, paper, linen, or near-whites with warm tint.",
+      "Don't introduce a second accent color. The legacy blue CTA (#2563eb) is deprecated — migrate to Iris.",
+      "Don't build Adobe/Premiere-style interfaces: no persistent multi-panel layouts, no sprawling toolbars.",
+      "Don't use gradient text (background-clip: text + gradient).",
+      "Don't use side-stripe borders (border-left > 1px) as a card or callout accent.",
+      "Don't put shadows on resting panels or cards.",
+      "Don't use uppercase tracked text on more than 2–3 elements per screen.",
+      "Don't use glassmorphism decoratively.",
+      "Don't display 'Nothing here' as an empty state — show what to do next."
+    ]
+  }
+}
