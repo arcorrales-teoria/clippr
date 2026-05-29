@@ -19,5 +19,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY *.py ./
 RUN mkdir -p outputs uploads
 
-EXPOSE 8080
+EXPOSE ${PORT:-8080}
 CMD ["python3", "server.py"]
